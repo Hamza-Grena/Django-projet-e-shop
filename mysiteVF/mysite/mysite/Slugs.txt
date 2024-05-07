@@ -1,0 +1,2 @@
+Les slugs :
+Dans Django ,les stages seront utilises pour creer des urls convivials et lisible au utilisateur

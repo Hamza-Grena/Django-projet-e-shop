@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %} vitrine des produits {% endblock %}
+{% block content %}
+    
+   
+    <div class="container-fluid mt-4">
+        <div class="row">
+        
+        <div id='list' class="col-lg-9 mx-auto">
+        <div class="row mx-auto">
+        
+        {% for article in list %}
+        <div id="{{ article.id }}" style="width: 16rem;">   
+            <img src="/media/{{ article.img }}" style="width: 250px; height: 250px;">
+        
+            <div>
+                <p>{{ article.libelle }}</p>
+                <p><b>{{ article.description }}</b></p>
+            </div>
+        </div>
+        
+        {% endfor %}
+        </div>
+        </div>
+        </div>
+        </div>
+        <form method="POST" class="post-form">
+            {% csrf_token %}
+            <div class="container">
+                <div style="overflow: scroll;border: #000000 1px solid;">
+                    <table>
+                        <tr>
+                            {% for article in list %}
+                                <td>
+                                    <img src = '/media/{{ article.img }}' class="rounded float-start" height="200px" width="200px" alt="">
+                                    <figcaption class="figure-caption"> {{ article.libelle }} </figcaption>
+                                    <p> {{ article.img }}</p>
+                                    <p> {{ article.prix }}Dt</p>              
+                                </td>
+                            {% endfor %}
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </form>
+{% endblock %}

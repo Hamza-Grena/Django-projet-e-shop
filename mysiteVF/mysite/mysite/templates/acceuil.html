@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Page d'accueil{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1><button class="btn btn-primary" disabled><span>Bienvenue Dans Note Projet Django</span></button></h1>
+        </div>
+    </div>
+    <nav>
+        <ul class="nav justify-content-center" style="gap: 1.5cm;">
+            <li class="nav-item">
+                <button class="btn btn-warning"><a style="color: white;text-decoration: none;" href="/magasin/">Application n°1 : Magasin</a></button>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-warning"><a style="color: white;text-decoration: none;" href="/blog/">Application n°2 : Blog</a></button>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-warning"><a style="color: white;text-decoration: none;" href="/magasin/">Application n°3</a></button>
+            </li>
+        </ul>
+    </nav>
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div id="contenu">
+                <h2>Django</h2>
+                <p>DSI23</p>
+            </div>
+            <p id="footer" class="text-center">Base de Page de Votre Site Web Django</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

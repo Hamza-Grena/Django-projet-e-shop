@@ -1,0 +1,26 @@
+
+{% extends "../base.html" %}
+{% load static %}
+
+{% block title %} 
+Créer le Post
+{% endblock title %}
+{% block styles %}
+{% endblock styles %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-xs-6"> 
+        <h1 class="display-1">Nv Post
+        </h1>
+        <div class="custom-form-style">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-warning btn-lg">Enregistrer</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
