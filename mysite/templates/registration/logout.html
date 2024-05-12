@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <h2>Vous êtes déconnecté.</h2>
+        <input type="submit" value="se reconnecter" class="btn btn-warning">
+    </form>
+{% endblock %}

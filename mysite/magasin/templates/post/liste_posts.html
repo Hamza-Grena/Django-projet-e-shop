@@ -1,0 +1,32 @@
+{% extends "../base.html" %}
+{% load static %}
+
+{% block title %}Liste des Posts{% endblock title %}
+{% block content %}
+<div class="container">
+    <button class="btn btn-dark"><a href="{% url 'creer_post' %}" style="color: white;">Ajout un nouveau post</a></button>
+    
+    <center><h2>-- List Des Posts --</h2></center>
+    <div class="row">
+        {% for post in posts %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card border-primary">
+                {% if post.image %}
+                <img class="card-img-top" src="{{ post.image.url }}" height="200px" width="200px" alt="Post Image">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <div class="d-grid gap-2">
+                        <button> <a href="{% url 'detail_post' post.pk %}" class="btn btn-primary" >Détails </a></button>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button> <a href="{% url 'modifier_post' post.pk %}" class="btn btn-warning">Modifier</a></button>
+                        <button> <a href="{% url 'supprimer_post' post.pk %}" class="btn btn-danger">Supprimer</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

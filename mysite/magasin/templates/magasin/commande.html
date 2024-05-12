@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Passer commande{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2 style="color: chocolate;">Nouvelle Commande</h2>
+        </div>
+    </div>
+    <form method="POST" class="post-form">
+        {% csrf_token %}
+        <div class="mb-3">
+            <div class="form-group">
+                {{ form.as_p }}
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Enregistrer commande</button>
+    </form>
+    
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h2>Liste de commandes</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Commande</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for commande in commandes %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ commande }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
