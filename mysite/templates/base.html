@@ -42,7 +42,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="nav-link" href="{% url 'index' %}"> <img src="{% static 'img/logo.png' %}" alt="logo" style="width: 120px;height: 90px;"> </a>
+          <a class="nav-link" href="{% url 'index' %}"> <img src="https://e7.pngegg.com/pngimages/996/491/png-clipart-shopify-e-commerce-logo-web-design-design-web-design-logo.png" alt="logo" style="width: 60px;height: 60px;"> </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -66,21 +66,21 @@
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <span class="nav-link" style="color: chocolate;">Bonjour, <b><i>{{ user }}</i></b></span>
+                            <span class="nav-link" style="color: #ca14af;">Bienvenue, <b><i>{{ user }}</i></b>   😃   </span>
                         </li>
                         <li class="nav-item">
                             <form method="post" action="{% url 'logout' %}">
                                 {% csrf_token %}
-                                <button class="btn btn-danger" type="submit">Déconnexion</button>
+                                <button class="btn btn-none" style="background-color:#ff306d;color:white;" type="submit">Déconnexion</button>
                             </form>
                         </li>
                     {% else %}
                         <li class="nav-item">
-                            <a class="btn btn-secondary" href="{% url 'login' %}">Connexion</a>
+                            <a class="btn btn-none"style="background-color:#c4d4b1;" href="{% url 'login' %}">Connexion</a>
                         </li>
                        
                         <li class="nav-item" style="margin-left : 10px;">
-                            <a class="btn btn-dark" href="{% url 'register' %}">Inscription</a>
+                            <a class="btn btn-none" style="background-color:#e4de00;" href="{% url 'register' %}">Inscription</a>
                         </li>
                     {% endif %}
                 </ul>
@@ -92,10 +92,20 @@
         {% block content %} {% endblock %}
     </div>
 
-    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
 <center>
-    <footer  style="color: white;">
-        &copy; 2024 E-Shop. All rights reserved. | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+    <footer  style="color: black; background-color:#42505f;">
+        &copy; 2024 Online store. All rights reserved. |Made with❤️ by Hamza Grena </a>
     </footer>
   </center>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

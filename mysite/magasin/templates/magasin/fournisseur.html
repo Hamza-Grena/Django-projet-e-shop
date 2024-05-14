@@ -2,23 +2,24 @@
 {% block title %}Ajouter fournisseur{% endblock %}
 {% block content %}
 <div class="col-md-12 text-center">
-    <h2><b>- Ajouter Fournisseur -</b></h2>
+    <h2><b>Ajouter Fournisseur</b></h2>
 </div>
 <form method="POST" class="post-form" >
     {% csrf_token %}
     {{form.as_p}}
-    <button type="submit" class="btn btn-info">Enregistrer fournisseur</button>
+    <button type="submit" class="btn btn-info">Enregistrer un fournisseur</button>
 </form>
-<center><h2><b>- liste de fournisseurs -</b></h2></center>
+<center><h2><b>La liste de fournisseurs</b></h2></center>
+<hr>
 
 <div class="container">
-    <table class="table">
+    <table class="table table-dark">
       <thead>
         <tr>
-          <th scope="col">Nom fournisseur</th>
-          <th scope="col">Adresse fournisseur</th>
-          <th scope="col">Email fournisseur</th>
-          <th scope="col">Téléphone fournisseur</th>
+          <th scope="col"><b>Nom fournisseur</b></th>
+          <th scope="col"><b>Adresse fournisseur</b></th>
+          <th scope="col"><b>Email fournisseur</b></th>
+          <th scope="col"><b>Telephone fournisseur</b></th>
         </tr>
       </thead>
       <tbody>

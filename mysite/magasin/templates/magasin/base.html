@@ -9,20 +9,21 @@
             {% block title %} {% endblock %}
         </title>
         <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/postStyle.css' %}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         {% block styles %} {% endblock %}
     </head>
     <body>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-              <a class="nav-link" href="{% url 'index' %}"> <img src="{% static 'img/facebook.png' %}" alt="logo" style="width: 50px;height: 50px;"> </a>
+              <a class="nav-link" href="{% url 'index' %}"> <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.alamyimages.fr%2Flettre-initiale-e-shopping-bag-pour-la-vente-au-detail-numerique-en-ligne-e-commerce-boutique-marche-supermarche-entreprise-marque-application-mobile-simple-creative-flat-logo-image432760592.html&psig=AOvVaw0RDQPgfAUD5rX2cvg-zzho&ust=1715728360139000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNC556zgi4YDFQAAAAAdAAAAABAJ" alt="logo" style="width: 50px;height: 50px;"> </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'index' %}">Cataloguee</a>
+                    <a class="nav-link" href="{% url 'index' %}">Catalogue</a>
                   </li>
                   <li>
                     <a class="nav-link" href="{% url 'commande' %}">Passer Commande</a>
